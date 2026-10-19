@@ -1,0 +1,14 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+__pycache__/
+*.py[cod]
+.venv/
+node_modules/
+.playwright-cli/
+output/playwright/
+private-data/
+*.sqlite*
+*.log
+build/
