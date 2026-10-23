@@ -1,0 +1,37 @@
+{
+  "prototype": true,
+  "synthetic": true,
+  "customer": "QA Fictional Customer",
+  "interaction": {
+    "id": "DEMO-mvf9pp9f",
+    "channel": "Chat",
+    "sourceText": "Customer: <img src=x onerror=alert(1)> I have an invoice question.\nAgent: Please send the invoice number. No refund has been agreed."
+  },
+  "analysis": {
+    "method": "keyword-extractive-v1",
+    "modelRevision": "none",
+    "configVersion": "topics-2026-10-19",
+    "sourceHash": "3f3556dbad18f50e00cf0447b0330c0eabab9eae7e74ebf10177dfebe4f46e0e",
+    "topics": [
+      "Billing"
+    ],
+    "summary": "<img src=x onerror=alert(1)> I have an invoice question. Please send the invoice number. No refund has been agreed.",
+    "sourceRefs": [
+      "turn-1",
+      "turn-2"
+    ],
+    "excerpts": [
+      {
+        "turnId": "turn-1",
+        "text": "<img src=x onerror=alert(1)> I have an invoice question."
+      },
+      {
+        "turnId": "turn-2",
+        "text": "Please send the invoice number. No refund has been agreed."
+      }
+    ],
+    "createdAt": "2026-10-19T13:06:11.373Z"
+  },
+  "review": null,
+  "limitations": "Local baseline demo. No server-side permissions or trained model."
+}

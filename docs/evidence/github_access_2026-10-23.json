@@ -1,0 +1,15 @@
+{
+  "checked": "2026-10-23",
+  "method": "GitHub CLI API: repository, collaborators and invitations",
+  "repository": "https://github.com/dinfy07/intelligent-crm-platform",
+  "visibility": "public",
+  "write_access": [
+    "B4rt0n1"
+  ],
+  "pending_write_invitation": [
+    "ZLHRS"
+  ],
+  "supervisor_account": null,
+  "publication_authorisation": "User explicitly authorised pushing one preparation branch and opening one PR on 23 October.",
+  "student_contribution_history": "Not established by the AI-assisted preparation commit."
+}

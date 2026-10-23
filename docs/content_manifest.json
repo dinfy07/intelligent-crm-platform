@@ -1,0 +1,529 @@
+{
+  "title": "Development of an Intelligent CRM Platform with Automated Customer Interaction Analysis",
+  "team": [
+    [
+      "Yeshimkul Beybit",
+      "Frontend and visualisation"
+    ],
+    [
+      "Shaikenov Danial",
+      "Backend and integrations"
+    ],
+    [
+      "Saken Akhmediyar",
+      "AI/NLP, evaluation and QA"
+    ]
+  ],
+  "papers": [
+    [
+      "L01",
+      2021,
+      "Chen et al.",
+      "DialogSum: A Real-Life Scenario Dialogue Summarization Dataset",
+      "Findings of ACL",
+      "https://aclanthology.org/2021.findings-acl.449/",
+      "Labelled dialogue summaries and benchmark experiments expose discourse and coreference challenges.",
+      "English everyday dialogues differ from customer records and local business vocabulary.",
+      "Use public dialogues for a smoke benchmark, then evaluate a separate domain set.",
+      "Dataset and input design",
+      "Peer reviewed; foundational"
+    ],
+    [
+      "L02",
+      2021,
+      "Zhong et al.",
+      "QMSum: A New Benchmark for Query-based Multi-domain Meeting Summarization",
+      "NAACL",
+      "https://aclanthology.org/2021.naacl-main.472/",
+      "Locate-then-summarise connects requested information to relevant dialogue spans.",
+      "Long meetings and query-focused summaries do not directly represent short CRM interactions.",
+      "Retain source turn identifiers for every extracted fact and inspect evidence during review.",
+      "Evidence-linked UX",
+      "Peer reviewed; foundational"
+    ],
+    [
+      "L03",
+      2022,
+      "Gao and Wan",
+      "DialSummEval: Revisiting Summarization Evaluation for Dialogues",
+      "NAACL",
+      "https://aclanthology.org/2022.naacl-main.418/",
+      "Compares automatic metrics against human judgements on coherence, consistency, fluency and relevance.",
+      "Findings depend on the studied datasets and model outputs; one metric cannot establish business utility.",
+      "Combine human factuality and key-fact coverage with timing measurements, rather than relying on ROUGE alone.",
+      "Evaluation dimensions",
+      "Peer reviewed"
+    ],
+    [
+      "L04",
+      2022,
+      "Wang et al.",
+      "Analyzing and Evaluating Faithfulness in Dialogue Summarization",
+      "EMNLP",
+      "https://aclanthology.org/2022.emnlp-main.325/",
+      "Analyses factual errors and proposes FacEval with transformed multiple-choice questions.",
+      "The paper notes that rule-based transformations cover only designed error types.",
+      "Add speaker swaps, negation changes and unsupported commitments to the error test set.",
+      "Adversarial test cases",
+      "Peer reviewed"
+    ],
+    [
+      "L05",
+      2022,
+      "Laban et al.",
+      "SummaC: Re-Visiting NLI-based Models for Inconsistency Detection in Summarization",
+      "TACL",
+      "https://aclanthology.org/2022.tacl-1.10/",
+      "Segments source and summary into smaller units and aggregates entailment signals.",
+      "An NLI score on summarisation benchmarks does not certify a CRM statement as true.",
+      "Consider consistency scoring as a secondary experiment, with human adjudication for the main outcome.",
+      "Optional consistency checker",
+      "Peer reviewed"
+    ],
+    [
+      "L06",
+      2023,
+      "Zhu et al.",
+      "Annotating and Detecting Fine-grained Factual Errors for Dialogue Summarization",
+      "ACL",
+      "https://aclanthology.org/2023.acl-long.377/",
+      "DIASUMFACT supplies fine-grained factual error annotations and compares error detectors.",
+      "The authors report limitations in practical error detection and evaluate their method on that dataset.",
+      "Use an explicit error taxonomy and retain reviewer decisions rather than automatically approving analyses.",
+      "Review labels and error audit",
+      "Peer reviewed"
+    ],
+    [
+      "L07",
+      2023,
+      "Malkiel et al.",
+      "GPT-Calls: Enhancing Call Segmentation and Tagging by Generating Synthetic Conversations via Large Language Models",
+      "arXiv preprint",
+      "https://arxiv.org/abs/2306.07941",
+      "Uses topic anchors and synthetic conversations to support call segmentation and tagging.",
+      "Production and domain-specific evidence cannot be reproduced from our small prototype; synthetic data are not user validation.",
+      "Compare topic tagging against a keyword baseline. Label synthetic fixtures separately from field evidence.",
+      "Topic taxonomy and baselines",
+      "Preprint; lower evidence weight"
+    ],
+    [
+      "L08",
+      2024,
+      "She et al.",
+      "Exploring the Factual Consistency in Dialogue Comprehension of Large Language Models",
+      "NAACL",
+      "https://aclanthology.org/2024.naacl-long.338/",
+      "Evaluates dialogue summaries and factual question answering, including participant attribution errors.",
+      "Results concern the evaluated model versions and data; published error rates are not predictions for this project.",
+      "Test attribution, dates and next steps on held-out interactions. Record model and prompt versions.",
+      "Factuality and reproducibility",
+      "Peer reviewed"
+    ],
+    [
+      "L09",
+      2024,
+      "Song et al.",
+      "FineSurE: Fine-grained Summarization Evaluation using LLMs",
+      "ACL",
+      "https://aclanthology.org/2024.acl-long.51/",
+      "Evaluates faithfulness, completeness and conciseness through fact checks and key-fact alignment.",
+      "The main benchmark is news, and LLM judging introduces domain and evaluator dependence.",
+      "Adopt key-fact coverage as a human rubric. Treat an automated judge as secondary and never as sole ground truth.",
+      "Annotation rubric",
+      "Peer reviewed"
+    ],
+    [
+      "L10",
+      2025,
+      "Zhu et al.",
+      "Factual Dialogue Summarization via Learning from Large Language Models",
+      "COLING",
+      "https://aclanthology.org/2025.coling-main.302/",
+      "Distils generated positive and negative examples to improve smaller dialogue summarisation models.",
+      "Training requires data and compute; benchmark improvements do not prove multilingual CRM readiness.",
+      "Keep fine-tuning outside the mandatory MVP. Compare a pretrained model with the extractive baseline first.",
+      "Model scope and feasibility",
+      "Peer reviewed"
+    ]
+  ],
+  "vendors": [
+    [
+      "S01",
+      "HubSpot",
+      "Review call recordings and transcripts",
+      "https://knowledge.hubspot.com/calling/review-call-recordings-and-transcripts",
+      "Transcripts, summaries, tracked terms and review workflow. Automatic transcription requires an eligible seat.",
+      "Documentation read; no paid account or hands-on test."
+    ],
+    [
+      "S02",
+      "Salesforce",
+      "Call Summaries and Generative Conversation Insights Powered by Einstein Generative AI",
+      "https://help.salesforce.com/s/articleView?id=sf.eci_call_summaries.htm&language=en_US",
+      "Generative voice/video call summaries with next steps and customer feedback.",
+      "Search-index excerpt verified; direct page returns a CSS/loading error. Confirm entitlements in an actual tenant."
+    ],
+    [
+      "S03",
+      "Zoho CRM",
+      "Zia Call Intelligence",
+      "https://help.zoho.com/portal/en/kb/crm/zia-artificial-intelligence/communication/zia-for-calls/articles/zia-call-intelligence",
+      "Transcription, one-line call summaries, keywords and sentiment. Professional and above, with regional exclusions stated by vendor.",
+      "Documentation read; no tenant test. Vendor scoring claims are not independent accuracy evidence."
+    ],
+    [
+      "S04",
+      "Dynamics 365 Sales",
+      "View and understand call summary page",
+      "https://learn.microsoft.com/en-us/dynamics365/sales/view-and-understand-call-summary",
+      "Call review with transcript and conversation insights.",
+      "Documentation read; exact availability depends on configuration and licence."
+    ],
+    [
+      "S05",
+      "Dynamics 365 Sales",
+      "Configure conversation content",
+      "https://learn.microsoft.com/en-us/dynamics365/sales/configure-keywords-competitors-sales-app",
+      "Tracked keywords and competitors can be configured for a sales team.",
+      "Documentation read; no tenant test."
+    ],
+    [
+      "S06",
+      "Dynamics 365 Sales",
+      "Languages supported for conversation intelligence",
+      "https://learn.microsoft.com/en-us/dynamics365/sales/language-support-conversation-intelligence",
+      "Distinguishes native language processing from translation-dependent insights.",
+      "Documentation read. Language support must be checked per feature, not inferred from product localisation."
+    ]
+  ],
+  "tech": [
+    [
+      "ADR-01 Frontend",
+      "Vue 3 + TypeScript",
+      "React + TypeScript; Angular",
+      "Proposed: Vue. Vue experience was reported by Beybit. Components, forms and a review workspace fit the scope [T01–T03].",
+      "Do not claim a performance advantage without measurement. Prototype is portable HTML/JS, not a completed Vue application."
+    ],
+    [
+      "ADR-02 Server",
+      "FastAPI / Python",
+      "NestJS / TypeScript; Django / Python",
+      "Proposed: FastAPI for validated API contracts and proximity to Python analysis code [T04–T06].",
+      "Danial must confirm maintainability. Keep inference outside request handlers. This is a documented proposal, not a benchmark winner."
+    ],
+    [
+      "ADR-03 Storage",
+      "PostgreSQL",
+      "MongoDB; SQLite",
+      "Proposed: relational customer/review records with JSONB analysis payloads [T07–T09].",
+      "MongoDB supports transactions. SQLite remains suitable for some embedded cases. Actual multi-user write and backup needs drive selection."
+    ],
+    [
+      "ADR-04 Interaction",
+      "Resource-oriented HTTP JSON + job polling",
+      "GraphQL; brokered messaging",
+      "Proposed: HTTP JSON for UI/API and durable PostgreSQL job state for the worker. It minimises initial services [T10, T11, T14].",
+      "GraphQL query flexibility and a broker may be useful later. Queue retries, leases and idempotency still need implementation and tests."
+    ],
+    [
+      "ADR-05 Analysis",
+      "Deterministic extractive baseline plus one pretrained candidate",
+      "Rules/extraction only; hosted LLM adapter",
+      "Mandatory baseline is inspectable and cheap. Compare a locally runnable pretrained method before choosing the final approach [L03–L10, T12, T13].",
+      "The final model is deliberately unselected until quality, language, licence, latency and hardware tests. Do not silently send client records to an external provider."
+    ]
+  ],
+  "requirements": [
+    [
+      "FR-01",
+      "Must",
+      "Session and object-level access",
+      "An analyst can view only assigned customer records; a manager can view all records in this organisation; only an admin manages users. Anonymous and forbidden requests return 401/403 without object content.",
+      "API access matrix including direct-ID requests",
+      "Danial"
+    ],
+    [
+      "FR-02",
+      "Must",
+      "Customer records",
+      "Authorised users create, view and update a customer with a unique ID, display name and owner. Blank names fail validation and rejected updates leave stored data unchanged.",
+      "API CRUD and invalid-input tests",
+      "Danial"
+    ],
+    [
+      "FR-03",
+      "Must",
+      "Interaction capture",
+      "Enter or import JSON with customer ID, channel, timestamp and ordered speaker/text turns. Unknown customer, invalid timestamp, missing turn text and excess size produce per-record errors before persistence.",
+      "Schema validation and import fixtures",
+      "Danial"
+    ],
+    [
+      "FR-04",
+      "Must",
+      "Search and filters",
+      "Search by customer name and filter interactions by customer, channel, date and review state. Combining filters returns their intersection and shows a usable empty state.",
+      "API query tests and UI task",
+      "Beybit"
+    ],
+    [
+      "FR-05",
+      "Must",
+      "Durable analysis job",
+      "For the same interaction revision and method/config version, repeated creation requests return one job. Status is queued, running, succeeded or failed. Bounded retry never overwrites a successful run.",
+      "Duplicate submission, worker crash and retry tests",
+      "Danial"
+    ],
+    [
+      "FR-06",
+      "Must",
+      "Analysis result with provenance",
+      "A completed run stores topic labels, an at-most-120-word summary, source-turn references, source hash, method/model/config version and creation time. Invalid references fail output validation.",
+      "Analysis contract and adversarial cases",
+      "Akhmediyar"
+    ],
+    [
+      "FR-07",
+      "Must",
+      "Human review",
+      "A reviewer inspects source and result side by side, edits the reviewed summary and approves or rejects it. The original output remains immutable and reviewer, timestamp and decision are recorded.",
+      "Review version and audit tests",
+      "Beybit"
+    ],
+    [
+      "FR-08",
+      "Must",
+      "Failure recovery",
+      "Failed jobs show an actionable error without customer text or secrets in the message. An authorised retry creates an attempt record and preserves prior failure history.",
+      "Timeout, unavailable model and malformed-output tests",
+      "Akhmediyar"
+    ],
+    [
+      "FR-09",
+      "Must",
+      "Export",
+      "Authorised export returns only accessible customer/interactions, both raw and reviewed results, provenance and review status. Empty selection produces a clear validation message.",
+      "Export schema and permission tests",
+      "Danial"
+    ],
+    [
+      "FR-10",
+      "Must",
+      "Run comparison",
+      "An experiment records dataset revision, baseline/candidate, configuration and metrics. An output table separates measured results from unexecuted targets.",
+      "Re-run using frozen inputs and manifest",
+      "Akhmediyar"
+    ],
+    [
+      "FR-11",
+      "Should",
+      "Overview",
+      "A manager sees counts by topic and review state from the same authorised filtered data. Counts reconcile with the underlying list.",
+      "Count reconciliation and empty dataset",
+      "Beybit"
+    ],
+    [
+      "FR-12",
+      "Could",
+      "Additional source adapter",
+      "A second connector is added only after mandatory scenarios pass and data permission is documented.",
+      "Adapter-specific acceptance set",
+      "Danial"
+    ]
+  ],
+  "nfr": [
+    [
+      "NFR-01",
+      "Must",
+      "Confidential data",
+      "No secrets or real customer records in Git. Example configuration uses placeholders. External inference stays disabled unless a data-use decision permits it.",
+      "Secret scan and repository review"
+    ],
+    [
+      "NFR-02",
+      "Must",
+      "Usability and keyboard access",
+      "Core review/import tasks work with keyboard only. Controls have labels and visible focus. At 390 px and 1440 px the primary workflow has no unintended page overflow.",
+      "Manual keyboard pass and browser checks"
+    ],
+    [
+      "NFR-03",
+      "Must",
+      "API responsiveness target",
+      "On a documented 4-core/8-GB reference host and 10 concurrent users over 1,000 synthetic customers and 5,000 interactions, non-inference reads target p95 <= 500 ms over 200 requests after warm-up. Exclude network-to-model time and report it separately.",
+      "Load test with recorded host and request mix; target, not observed result"
+    ],
+    [
+      "NFR-04",
+      "Must",
+      "Inference operational bound",
+      "With fixed model, host and inputs up to 2,000 words, report cold/warm p50/p95 latency, memory and failure rate. Set a 60-second job timeout and at most 2 automatic retries. No quality/latency pass is claimed before measurement.",
+      "Timed evaluation with failure injection"
+    ],
+    [
+      "NFR-05",
+      "Must",
+      "Reproducible runs",
+      "Every evaluation records code commit, dataset hash, method/model revision, prompt/config and environment. Non-deterministic methods report settings and run variability.",
+      "Manifest validation and second-run comparison"
+    ],
+    [
+      "NFR-06",
+      "Must",
+      "Persistence and audit",
+      "Successful writes are durable across an app restart. Review changes preserve raw outputs. A backup/restore rehearsal reconciles customer, interaction and review counts.",
+      "Restart and restore integration tests"
+    ],
+    [
+      "NFR-07",
+      "Must",
+      "Input and output limits",
+      "API rejects interaction text above 2,000 words or 100 KB and imports above 100 records. Client rendering treats transcript/model output as text, not executable HTML.",
+      "Boundary and script-injection tests"
+    ],
+    [
+      "NFR-08",
+      "Must",
+      "Review accountability",
+      "Only a human action sets approval. An algorithmic confidence value is not presented as a probability of correctness unless calibrated.",
+      "Review-state tests and UI inspection"
+    ]
+  ],
+  "criteria": [
+    [
+      "Interaction input",
+      "Recorded calls; associated CRM records [S01]",
+      "Voice and video call records [S02]",
+      "Recorded calls [S03]",
+      "Call transcripts [S04]"
+    ],
+    [
+      "Transcript inspection",
+      "Transcript and playback review [S01]",
+      "Transcript detail not verified in cited excerpt",
+      "Transcript highlights [S03]",
+      "Call transcript review [S04]"
+    ],
+    [
+      "Automatic summary",
+      "Summary shown in review workflow [S01]",
+      "Generative summary [S02]",
+      "One-line summary [S03]",
+      "Summary and insights page [S04]"
+    ],
+    [
+      "Topics and keywords",
+      "Tracked terms [S01]",
+      "Generative insights; exact keyword configuration not checked [S02]",
+      "Keywords and key phrases [S03]",
+      "Configured keywords/competitors [S05]"
+    ],
+    [
+      "Next steps",
+      "Not verified in cited page",
+      "Summary includes next steps [S02]",
+      "Intent documented; structured action list not verified [S03]",
+      "Action items vary by language [S06]"
+    ],
+    [
+      "Human review",
+      "Playback, comments and coaching [S01]",
+      "Sharing summaries documented [S02]",
+      "Transcript inspection documented [S03]",
+      "Review in call summary [S04]"
+    ],
+    [
+      "Entitlement constraints",
+      "Eligible Professional/Enterprise seats for transcription [S01]",
+      "Exact licence must be checked [S02]",
+      "Professional and above; JP excluded [S03]",
+      "Licence, roles and enablement apply [S05]"
+    ],
+    [
+      "Language constraints",
+      "Support must be checked for actual language",
+      "Not verified in cited excerpt",
+      "Local-language quality not established by page",
+      "Native versus translated support is feature-specific [S06]"
+    ]
+  ],
+  "checklist": [
+    [
+      "1",
+      "Proposal",
+      "Prepared candidate",
+      "docs/01_proposal.md",
+      "Team/supervisor must approve realistic scope."
+    ],
+    [
+      "2",
+      "Relevance evidence",
+      "OPEN",
+      "docs/02_relevance_and_discovery.md",
+      "Collect 3–5 real discussions or substantive client agreement."
+    ],
+    [
+      "3",
+      "Literature review",
+      "Prepared candidate",
+      "docs/03_literature_review.md",
+      "Team must critically review and defend 10 scientific sources."
+    ],
+    [
+      "4",
+      "Existing systems",
+      "Prepared candidate",
+      "docs/04_existing_systems.md",
+      "4 systems x 8 criteria; documentation-only limits disclosed."
+    ],
+    [
+      "5",
+      "Technology comparison",
+      "Prepared candidate",
+      "docs/05_technology_comparison.md",
+      "5 decisions x 3 alternatives; decisions require review."
+    ],
+    [
+      "6",
+      "Requirements",
+      "Prepared candidate",
+      "docs/06_requirements.md",
+      "12 FR + 8 NFR; targets proposed, backend unimplemented."
+    ],
+    [
+      "7",
+      "Architecture",
+      "Prepared candidate",
+      "diagrams/",
+      "3 editable UML sources and readable exports."
+    ],
+    [
+      "8",
+      "UX prototype",
+      "Runnable prototype",
+      "prototype/index.html",
+      "Synthetic baseline demo; user validation still open."
+    ],
+    [
+      "9",
+      "Verification plan",
+      "Prepared candidate",
+      "docs/09_verification_evaluation.md",
+      "No model/user-study results claimed."
+    ],
+    [
+      "10",
+      "Management",
+      "PARTIAL: tracker and 14 assigned issues; real reviews still open",
+      "docs/10_management_risks.md",
+      "Real YouTrack, collaborator access, genuine progression and reviews still required."
+    ],
+    [
+      "11",
+      "Supervisor feedback",
+      "OPEN",
+      "docs/11_supervisor_feedback.md",
+      "Actual substantive comments and linked revisions required."
+    ]
+  ]
+}

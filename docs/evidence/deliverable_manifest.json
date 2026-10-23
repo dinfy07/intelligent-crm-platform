@@ -1,0 +1,28 @@
+{
+  "prepared": "2026-10-19",
+  "status_updated": "2026-10-23",
+  "report_pages": 32,
+  "guide_pages": 3,
+  "slides": 21,
+  "automated_tests": 13,
+  "browser_checks": 17,
+  "browser_check_date": "2026-10-19",
+  "visual_review": "23 Oct: all pages/slides rendered; 4 changed report pages, all 3 guide pages and 2 changed slides inspected. The other 28 report pages and 19 slides match the original render pixel-for-pixel.",
+  "files": [
+    {
+      "file": "deliverables/CRM_Defense_Guide_RU.docx",
+      "bytes": 40808,
+      "sha256": "3c93309e59d1c8d26da5a60f78032029766726a1d20f4d9f05dfcb4f4e5d318e"
+    },
+    {
+      "file": "deliverables/CRM_Predefense_1_EN.pptx",
+      "bytes": 291811,
+      "sha256": "984854fe03b5e27a7e16ff4e66f4644004f2efaeced9ee1d4c79eadbf851079d"
+    },
+    {
+      "file": "deliverables/CRM_Predefense_1_Report_EN.docx",
+      "bytes": 501172,
+      "sha256": "f6e96fa5ba7770c6c42a2853708f7e56a7f30561929fd2c7db622ffdc553f401"
+    }
+  ]
+}

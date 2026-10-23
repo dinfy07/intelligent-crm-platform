@@ -1,0 +1,107 @@
+{
+  "schemaVersion": "presentation-finalization.v1",
+  "finalSha256": "984854fe03b5e27a7e16ff4e66f4644004f2efaeced9ee1d4c79eadbf851079d",
+  "byteCount": 291811,
+  "packageIntegrity": {
+    "chart_count": 0,
+    "claim_boundary": "Structural package checks only; no slide text, notes, formulas, chart values, or native PowerPoint execution were inspected.",
+    "finding_count": 0,
+    "findings": [],
+    "notes_parts_skipped": 21,
+    "relationship_part_count": 52,
+    "slide_count": 21,
+    "status": "pass",
+    "exitCode": 0,
+    "findingCount": 0,
+    "warnings": []
+  },
+  "presentationLayout": {
+    "finding_count": 0,
+    "findings": [],
+    "font_policy": {
+      "checked_text_script_count": 330,
+      "native_font_rendering_verified": false,
+      "observed_font_families": [
+        "Arial"
+      ],
+      "observed_font_use_counts": {
+        "Arial": 330
+      },
+      "passed": true,
+      "performed": true
+    },
+    "slide_count": 21,
+    "slide_size_in": [
+      16.6667,
+      9.375
+    ],
+    "warning_count": 0,
+    "warnings": [],
+    "exitCode": 0,
+    "findingCount": 0,
+    "fontPolicy": {
+      "checked_text_script_count": 330,
+      "native_font_rendering_verified": false,
+      "observed_font_families": [
+        "Arial"
+      ],
+      "observed_font_use_counts": {
+        "Arial": 330
+      },
+      "passed": true,
+      "performed": true
+    }
+  },
+  "nativeTableArithmetic": {
+    "performed": true,
+    "checked_column_count": 0,
+    "checks": [],
+    "claim_boundary": "Displayed-value arithmetic with rounding tolerance; not source-data verification.",
+    "eligible_table_count": 0,
+    "finding_count": 0,
+    "findings": [],
+    "native_table_count": 5,
+    "passed": true,
+    "schema_version": "presentation-native-table-arithmetic.v1",
+    "skipped_tables": [
+      {
+        "reason": "no_numeric_amounts",
+        "slide": 4,
+        "table": 1
+      },
+      {
+        "reason": "no_numeric_amounts",
+        "slide": 8,
+        "table": 1
+      },
+      {
+        "reason": "no_numeric_amounts",
+        "slide": 9,
+        "table": 1
+      },
+      {
+        "reason": "no_numeric_amounts",
+        "slide": 10,
+        "table": 1
+      },
+      {
+        "reason": "no_numeric_amounts",
+        "slide": 18,
+        "table": 1
+      }
+    ],
+    "slide_count": 21,
+    "warning_count": 0,
+    "warnings": []
+  },
+  "firstPartyImport": {
+    "performed": true,
+    "passed": true,
+    "slideCount": 21,
+    "sha256": "984854fe03b5e27a7e16ff4e66f4644004f2efaeced9ee1d4c79eadbf851079d",
+    "runtimeNodeModules": "/Users/beibit/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules",
+    "nodeExecutable": "/Users/beibit/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node"
+  },
+  "artifact": "deliverables/CRM_Predefense_1_EN.pptx",
+  "checked": "2026-10-23"
+}

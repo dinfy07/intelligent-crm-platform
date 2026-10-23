@@ -1,0 +1,21 @@
+{
+  "checked": "2026-10-19",
+  "repository": "https://github.com/dinfy07/intelligent-crm-platform",
+  "visibility": "private",
+  "remote_baseline": "e5cfad1",
+  "invitation_status_at_check": "pending",
+  "invitations": [
+    {
+      "student": "Saken Akhmediyar",
+      "login": "B4rt0n1",
+      "permission": "write"
+    },
+    {
+      "student": "Shaikenov Danial",
+      "login": "ZLHRS",
+      "permission": "write"
+    }
+  ],
+  "supervisor_account": null,
+  "publication_instruction": "No further automatic commits or pushes. Students commit and push their own meaningful revisions."
+}

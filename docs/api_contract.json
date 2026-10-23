@@ -1,0 +1,349 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Intelligent CRM proposed API",
+    "version": "0.1.0-design",
+    "description": "Design contract only. Endpoints are not implemented."
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8000",
+      "description": "Proposed local development server"
+    }
+  ],
+  "paths": {
+    "/sessions": {
+      "post": {
+        "summary": "Create authenticated session",
+        "description": "FR-01; server-side session and object authorisation required.",
+        "responses": {
+          "200": {
+            "description": "Session established"
+          },
+          "401": {
+            "description": "Invalid credentials"
+          }
+        }
+      }
+    },
+    "/customers": {
+      "get": {
+        "summary": "List only accessible customers",
+        "description": "FR-01/FR-04; server-side session and object authorisation required.",
+        "responses": {
+          "200": {
+            "description": "Success where appropriate"
+          },
+          "401": {
+            "description": "No session"
+          },
+          "403": {
+            "description": "Forbidden without object content"
+          },
+          "422": {
+            "description": "Invalid input"
+          }
+        }
+      },
+      "post": {
+        "summary": "Create customer",
+        "description": "FR-02; server-side session and object authorisation required.",
+        "responses": {
+          "200": {
+            "description": "Success where appropriate"
+          },
+          "401": {
+            "description": "No session"
+          },
+          "403": {
+            "description": "Forbidden without object content"
+          },
+          "422": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/customers/{customer_id}": {
+      "get": {
+        "summary": "Read customer after object-level authorisation",
+        "description": "FR-01/FR-02; server-side session and object authorisation required.",
+        "responses": {
+          "200": {
+            "description": "Success where appropriate"
+          },
+          "401": {
+            "description": "No session"
+          },
+          "403": {
+            "description": "Forbidden without object content"
+          },
+          "422": {
+            "description": "Invalid input"
+          }
+        },
+        "parameters": [
+          {
+            "name": "customer_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ]
+      },
+      "patch": {
+        "summary": "Update accessible customer",
+        "description": "FR-02; server-side session and object authorisation required.",
+        "responses": {
+          "200": {
+            "description": "Success where appropriate"
+          },
+          "401": {
+            "description": "No session"
+          },
+          "403": {
+            "description": "Forbidden without object content"
+          },
+          "422": {
+            "description": "Invalid input"
+          }
+        },
+        "parameters": [
+          {
+            "name": "customer_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ]
+      }
+    },
+    "/interactions/import": {
+      "post": {
+        "summary": "Validate and import text interactions",
+        "description": "FR-03; server-side session and object authorisation required.",
+        "responses": {
+          "200": {
+            "description": "Success where appropriate"
+          },
+          "401": {
+            "description": "No session"
+          },
+          "403": {
+            "description": "Forbidden without object content"
+          },
+          "422": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/interactions": {
+      "get": {
+        "summary": "List accessible filtered interactions",
+        "description": "FR-04; server-side session and object authorisation required.",
+        "responses": {
+          "200": {
+            "description": "Success where appropriate"
+          },
+          "401": {
+            "description": "No session"
+          },
+          "403": {
+            "description": "Forbidden without object content"
+          },
+          "422": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/interactions/{interaction_id}": {
+      "get": {
+        "summary": "Read interaction with ordered source turns",
+        "description": "FR-01/FR-03; server-side session and object authorisation required.",
+        "responses": {
+          "200": {
+            "description": "Success where appropriate"
+          },
+          "401": {
+            "description": "No session"
+          },
+          "403": {
+            "description": "Forbidden without object content"
+          },
+          "422": {
+            "description": "Invalid input"
+          }
+        },
+        "parameters": [
+          {
+            "name": "interaction_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ]
+      }
+    },
+    "/interactions/{interaction_id}/analysis-jobs": {
+      "post": {
+        "summary": "Create or return idempotent job for source/config revision",
+        "description": "FR-05; server-side session and object authorisation required.",
+        "responses": {
+          "200": {
+            "description": "Success where appropriate"
+          },
+          "401": {
+            "description": "No session"
+          },
+          "403": {
+            "description": "Forbidden without object content"
+          },
+          "422": {
+            "description": "Invalid input"
+          },
+          "202": {
+            "description": "Job accepted or existing job returned"
+          }
+        },
+        "parameters": [
+          {
+            "name": "interaction_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ]
+      }
+    },
+    "/analysis-jobs/{job_id}": {
+      "get": {
+        "summary": "Read authorised job state and safe failure code",
+        "description": "FR-05/FR-08; server-side session and object authorisation required.",
+        "responses": {
+          "200": {
+            "description": "Success where appropriate"
+          },
+          "401": {
+            "description": "No session"
+          },
+          "403": {
+            "description": "Forbidden without object content"
+          },
+          "422": {
+            "description": "Invalid input"
+          }
+        },
+        "parameters": [
+          {
+            "name": "job_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ]
+      }
+    },
+    "/analysis-jobs/{job_id}/retry": {
+      "post": {
+        "summary": "Retry failed analysis without losing attempt history",
+        "description": "FR-08; server-side session and object authorisation required.",
+        "responses": {
+          "200": {
+            "description": "Success where appropriate"
+          },
+          "401": {
+            "description": "No session"
+          },
+          "403": {
+            "description": "Forbidden without object content"
+          },
+          "422": {
+            "description": "Invalid input"
+          },
+          "202": {
+            "description": "Job accepted or existing job returned"
+          }
+        },
+        "parameters": [
+          {
+            "name": "job_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ]
+      }
+    },
+    "/analysis-runs/{run_id}/reviews": {
+      "post": {
+        "summary": "Append human review preserving raw output",
+        "description": "FR-07; server-side session and object authorisation required.",
+        "responses": {
+          "200": {
+            "description": "Success where appropriate"
+          },
+          "401": {
+            "description": "No session"
+          },
+          "403": {
+            "description": "Forbidden without object content"
+          },
+          "422": {
+            "description": "Invalid input"
+          }
+        },
+        "parameters": [
+          {
+            "name": "run_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ]
+      }
+    },
+    "/exports": {
+      "post": {
+        "summary": "Export accessible selected records and provenance",
+        "description": "FR-09; server-side session and object authorisation required.",
+        "responses": {
+          "200": {
+            "description": "Success where appropriate"
+          },
+          "401": {
+            "description": "No session"
+          },
+          "403": {
+            "description": "Forbidden without object content"
+          },
+          "422": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    }
+  }
+}

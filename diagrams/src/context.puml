@@ -1,0 +1,25 @@
+@startuml
+skinparam backgroundColor white
+skinparam defaultFontName Arial
+skinparam shadowing false
+skinparam ArrowColor #43546B
+skinparam defaultFontSize 15
+skinparam componentStyle uml2
+title System context — proposed text-first CRM
+left to right direction
+actor "Analyst\nAssigned customers" as Analyst
+actor "Manager\nOrganisation-wide review" as Manager
+actor "Administrator" as Admin
+rectangle "Intelligent CRM Platform\nCustomer records, text interactions,\nanalysis and human review" as CRM
+rectangle "Text source\nManual entry or JSON file" as Source
+cloud "Optional external inference provider\nDisabled until data-use decision" as Provider
+Analyst --> CRM : capture, analyse, review
+Manager --> CRM : inspect, review, export
+Admin --> CRM : manage accounts and access
+Source --> CRM : validated text import
+CRM ..> Provider : optional approved analysis
+note bottom of CRM
+Single organisation, English-first evaluation.
+No direct customer messaging or live call recording.
+end note
+@enduml

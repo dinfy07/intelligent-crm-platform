@@ -1,0 +1,210 @@
+{
+  "verified_on": "2026-10-23",
+  "verification": "YouTrack UI: each saved issue ID observed; reloaded task list showed 14 tasks; board reloaded with 14 To Do cards and four columns; date fields verified on board; updated: People page showed 3 team accounts; after assignment and reload, all 14 issue rows showed the expected assignees (admin 5, shaykenov.danialq 6, ahmediars06 3)",
+  "project_name": "Intelligent CRM Platform",
+  "project_key": "CRM",
+  "project_url": "https://crm-se2426.youtrack.cloud/projects/CRM",
+  "task_list_url": "https://crm-se2426.youtrack.cloud/projects/CRM/issues",
+  "board_url": "https://crm-se2426.youtrack.cloud/agiles/204-1/218-1",
+  "board_name": "CRM — Pre-defense 1",
+  "columns": [
+    "To Do",
+    "In Progress",
+    "Review",
+    "Done"
+  ],
+  "team_invitations": "Invitations submitted successfully through YouTrack; project team shows 3 accounts. Danial and Akhmediyar have Contributor roles. Acceptance and recipient mailbox delivery not independently verified.",
+  "supervisor_access": "Not granted in this setup",
+  "vcs_integration": "Not configured; repository URL in project and issue descriptions",
+  "git_commit_or_push_performed": false,
+  "issues": [
+    {
+      "local_planning_id": "PLN-01",
+      "youtrack_id": "CRM-1",
+      "url": "https://crm-se2426.youtrack.cloud/issue/CRM-1",
+      "summary": "Validate customer workflow",
+      "responsible_student": "Beybit",
+      "assignee_login": "admin",
+      "assignee_state": "Assigned; verified in reloaded YouTrack issue list",
+      "priority": "Critical",
+      "due_date": "2026-10-23",
+      "state": "To Do"
+    },
+    {
+      "local_planning_id": "PLN-02",
+      "youtrack_id": "CRM-2",
+      "url": "https://crm-se2426.youtrack.cloud/issue/CRM-2",
+      "summary": "Approve problem and MVP boundary",
+      "responsible_student": "Danial",
+      "assignee_login": "shaykenov.danialq",
+      "assignee_state": "Assigned; verified in reloaded YouTrack issue list",
+      "priority": "Critical",
+      "due_date": "2026-10-23",
+      "state": "To Do"
+    },
+    {
+      "local_planning_id": "PLN-03",
+      "youtrack_id": "CRM-3",
+      "url": "https://crm-se2426.youtrack.cloud/issue/CRM-3",
+      "summary": "Review scientific evidence",
+      "responsible_student": "Akhmediyar",
+      "assignee_login": "ahmediars06",
+      "assignee_state": "Assigned; verified in reloaded YouTrack issue list",
+      "priority": "High",
+      "due_date": "2026-10-23",
+      "state": "To Do"
+    },
+    {
+      "local_planning_id": "PLN-04",
+      "youtrack_id": "CRM-4",
+      "url": "https://crm-se2426.youtrack.cloud/issue/CRM-4",
+      "summary": "Confirm existing system comparison",
+      "responsible_student": "Beybit",
+      "assignee_login": "admin",
+      "assignee_state": "Assigned; verified in reloaded YouTrack issue list",
+      "priority": "High",
+      "due_date": "2026-10-23",
+      "state": "To Do"
+    },
+    {
+      "local_planning_id": "PLN-05",
+      "youtrack_id": "CRM-5",
+      "url": "https://crm-se2426.youtrack.cloud/issue/CRM-5",
+      "summary": "Review technology ADRs",
+      "responsible_student": "Danial",
+      "assignee_login": "shaykenov.danialq",
+      "assignee_state": "Assigned; verified in reloaded YouTrack issue list",
+      "priority": "High",
+      "due_date": "2026-10-23",
+      "state": "To Do"
+    },
+    {
+      "local_planning_id": "PLN-06",
+      "youtrack_id": "CRM-6",
+      "url": "https://crm-se2426.youtrack.cloud/issue/CRM-6",
+      "summary": "Baseline requirements and traceability",
+      "responsible_student": "Danial",
+      "assignee_login": "shaykenov.danialq",
+      "assignee_state": "Assigned; verified in reloaded YouTrack issue list",
+      "priority": "Critical",
+      "due_date": "2026-10-23",
+      "state": "To Do"
+    },
+    {
+      "local_planning_id": "PLN-07",
+      "youtrack_id": "CRM-7",
+      "url": "https://crm-se2426.youtrack.cloud/issue/CRM-7",
+      "summary": "Review required UML diagrams",
+      "responsible_student": "Danial",
+      "assignee_login": "shaykenov.danialq",
+      "assignee_state": "Assigned; verified in reloaded YouTrack issue list",
+      "priority": "High",
+      "due_date": "2026-10-23",
+      "state": "To Do"
+    },
+    {
+      "local_planning_id": "PLN-08",
+      "youtrack_id": "CRM-8",
+      "url": "https://crm-se2426.youtrack.cloud/issue/CRM-8",
+      "summary": "Validate prototype with users",
+      "responsible_student": "Beybit",
+      "assignee_login": "admin",
+      "assignee_state": "Assigned; verified in reloaded YouTrack issue list",
+      "priority": "High",
+      "due_date": "2026-10-23",
+      "state": "To Do"
+    },
+    {
+      "local_planning_id": "PLN-09",
+      "youtrack_id": "CRM-9",
+      "url": "https://crm-se2426.youtrack.cloud/issue/CRM-9",
+      "summary": "Approve evaluation protocol",
+      "responsible_student": "Akhmediyar",
+      "assignee_login": "ahmediars06",
+      "assignee_state": "Assigned; verified in reloaded YouTrack issue list",
+      "priority": "High",
+      "due_date": "2026-10-23",
+      "state": "To Do"
+    },
+    {
+      "local_planning_id": "PLN-10",
+      "youtrack_id": "CRM-10",
+      "url": "https://crm-se2426.youtrack.cloud/issue/CRM-10",
+      "summary": "Set up YouTrack and map tasks",
+      "responsible_student": "Danial",
+      "assignee_login": "shaykenov.danialq",
+      "assignee_state": "Assigned; verified in reloaded YouTrack issue list",
+      "priority": "Critical",
+      "due_date": "2026-10-23",
+      "state": "To Do"
+    },
+    {
+      "local_planning_id": "PLN-11",
+      "youtrack_id": "CRM-11",
+      "url": "https://crm-se2426.youtrack.cloud/issue/CRM-11",
+      "summary": "Collect supervisor review",
+      "responsible_student": "Beybit",
+      "assignee_login": "admin",
+      "assignee_state": "Assigned; verified in reloaded YouTrack issue list",
+      "priority": "Critical",
+      "due_date": "2026-10-23",
+      "state": "To Do"
+    },
+    {
+      "local_planning_id": "PLN-12",
+      "youtrack_id": "CRM-12",
+      "url": "https://crm-se2426.youtrack.cloud/issue/CRM-12",
+      "summary": "Review source links and contracts",
+      "responsible_student": "Akhmediyar",
+      "assignee_login": "ahmediars06",
+      "assignee_state": "Assigned; verified in reloaded YouTrack issue list",
+      "priority": "High",
+      "due_date": "2026-10-23",
+      "state": "To Do"
+    },
+    {
+      "local_planning_id": "PLN-13",
+      "youtrack_id": "CRM-13",
+      "url": "https://crm-se2426.youtrack.cloud/issue/CRM-13",
+      "summary": "Team review and checkpoint release",
+      "responsible_student": "Danial",
+      "assignee_login": "shaykenov.danialq",
+      "assignee_state": "Assigned; verified in reloaded YouTrack issue list",
+      "priority": "Critical",
+      "due_date": "2026-10-24",
+      "state": "To Do"
+    },
+    {
+      "local_planning_id": "PLN-14",
+      "youtrack_id": "CRM-14",
+      "url": "https://crm-se2426.youtrack.cloud/issue/CRM-14",
+      "summary": "Rehearse English presentation",
+      "responsible_student": "Beybit",
+      "assignee_login": "admin",
+      "assignee_state": "Assigned; verified in reloaded YouTrack issue list",
+      "priority": "High",
+      "due_date": "2026-10-23",
+      "state": "To Do"
+    }
+  ],
+  "team_accounts": [
+    {
+      "student": "Beybit",
+      "login": "admin",
+      "role": "Project owner and system administrator",
+      "invitation_acceptance": "Existing signed-in owner"
+    },
+    {
+      "student": "Danial",
+      "login": "shaykenov.danialq",
+      "role": "Contributor",
+      "invitation_acceptance": "Not verified"
+    },
+    {
+      "student": "Akhmediyar",
+      "login": "ahmediars06",
+      "role": "Contributor",
+      "invitation_acceptance": "Not verified"
+    }
+  ]
+}

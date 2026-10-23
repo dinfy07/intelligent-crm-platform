@@ -1,0 +1,158 @@
+{
+  "functional": [
+    {
+      "id": "FR-01",
+      "priority": "Must",
+      "name": "Session and object-level access",
+      "acceptance": "An analyst can view only assigned customer records; a manager can view all records in this organisation; only an admin manages users. Anonymous and forbidden requests return 401/403 without object content.",
+      "verification": "API access matrix including direct-ID requests",
+      "owner": "Danial"
+    },
+    {
+      "id": "FR-02",
+      "priority": "Must",
+      "name": "Customer records",
+      "acceptance": "Authorised users create, view and update a customer with a unique ID, display name and owner. Blank names fail validation and rejected updates leave stored data unchanged.",
+      "verification": "API CRUD and invalid-input tests",
+      "owner": "Danial"
+    },
+    {
+      "id": "FR-03",
+      "priority": "Must",
+      "name": "Interaction capture",
+      "acceptance": "Enter or import JSON with customer ID, channel, timestamp and ordered speaker/text turns. Unknown customer, invalid timestamp, missing turn text and excess size produce per-record errors before persistence.",
+      "verification": "Schema validation and import fixtures",
+      "owner": "Danial"
+    },
+    {
+      "id": "FR-04",
+      "priority": "Must",
+      "name": "Search and filters",
+      "acceptance": "Search by customer name and filter interactions by customer, channel, date and review state. Combining filters returns their intersection and shows a usable empty state.",
+      "verification": "API query tests and UI task",
+      "owner": "Beybit"
+    },
+    {
+      "id": "FR-05",
+      "priority": "Must",
+      "name": "Durable analysis job",
+      "acceptance": "For the same interaction revision and method/config version, repeated creation requests return one job. Status is queued, running, succeeded or failed. Bounded retry never overwrites a successful run.",
+      "verification": "Duplicate submission, worker crash and retry tests",
+      "owner": "Danial"
+    },
+    {
+      "id": "FR-06",
+      "priority": "Must",
+      "name": "Analysis result with provenance",
+      "acceptance": "A completed run stores topic labels, an at-most-120-word summary, source-turn references, source hash, method/model/config version and creation time. Invalid references fail output validation.",
+      "verification": "Analysis contract and adversarial cases",
+      "owner": "Akhmediyar"
+    },
+    {
+      "id": "FR-07",
+      "priority": "Must",
+      "name": "Human review",
+      "acceptance": "A reviewer inspects source and result side by side, edits the reviewed summary and approves or rejects it. The original output remains immutable and reviewer, timestamp and decision are recorded.",
+      "verification": "Review version and audit tests",
+      "owner": "Beybit"
+    },
+    {
+      "id": "FR-08",
+      "priority": "Must",
+      "name": "Failure recovery",
+      "acceptance": "Failed jobs show an actionable error without customer text or secrets in the message. An authorised retry creates an attempt record and preserves prior failure history.",
+      "verification": "Timeout, unavailable model and malformed-output tests",
+      "owner": "Akhmediyar"
+    },
+    {
+      "id": "FR-09",
+      "priority": "Must",
+      "name": "Export",
+      "acceptance": "Authorised export returns only accessible customer/interactions, both raw and reviewed results, provenance and review status. Empty selection produces a clear validation message.",
+      "verification": "Export schema and permission tests",
+      "owner": "Danial"
+    },
+    {
+      "id": "FR-10",
+      "priority": "Must",
+      "name": "Run comparison",
+      "acceptance": "An experiment records dataset revision, baseline/candidate, configuration and metrics. An output table separates measured results from unexecuted targets.",
+      "verification": "Re-run using frozen inputs and manifest",
+      "owner": "Akhmediyar"
+    },
+    {
+      "id": "FR-11",
+      "priority": "Should",
+      "name": "Overview",
+      "acceptance": "A manager sees counts by topic and review state from the same authorised filtered data. Counts reconcile with the underlying list.",
+      "verification": "Count reconciliation and empty dataset",
+      "owner": "Beybit"
+    },
+    {
+      "id": "FR-12",
+      "priority": "Could",
+      "name": "Additional source adapter",
+      "acceptance": "A second connector is added only after mandatory scenarios pass and data permission is documented.",
+      "verification": "Adapter-specific acceptance set",
+      "owner": "Danial"
+    }
+  ],
+  "nonfunctional": [
+    {
+      "id": "NFR-01",
+      "priority": "Must",
+      "name": "Confidential data",
+      "acceptance": "No secrets or real customer records in Git. Example configuration uses placeholders. External inference stays disabled unless a data-use decision permits it.",
+      "verification": "Secret scan and repository review"
+    },
+    {
+      "id": "NFR-02",
+      "priority": "Must",
+      "name": "Usability and keyboard access",
+      "acceptance": "Core review/import tasks work with keyboard only. Controls have labels and visible focus. At 390 px and 1440 px the primary workflow has no unintended page overflow.",
+      "verification": "Manual keyboard pass and browser checks"
+    },
+    {
+      "id": "NFR-03",
+      "priority": "Must",
+      "name": "API responsiveness target",
+      "acceptance": "On a documented 4-core/8-GB reference host and 10 concurrent users over 1,000 synthetic customers and 5,000 interactions, non-inference reads target p95 <= 500 ms over 200 requests after warm-up. Exclude network-to-model time and report it separately.",
+      "verification": "Load test with recorded host and request mix; target, not observed result"
+    },
+    {
+      "id": "NFR-04",
+      "priority": "Must",
+      "name": "Inference operational bound",
+      "acceptance": "With fixed model, host and inputs up to 2,000 words, report cold/warm p50/p95 latency, memory and failure rate. Set a 60-second job timeout and at most 2 automatic retries. No quality/latency pass is claimed before measurement.",
+      "verification": "Timed evaluation with failure injection"
+    },
+    {
+      "id": "NFR-05",
+      "priority": "Must",
+      "name": "Reproducible runs",
+      "acceptance": "Every evaluation records code commit, dataset hash, method/model revision, prompt/config and environment. Non-deterministic methods report settings and run variability.",
+      "verification": "Manifest validation and second-run comparison"
+    },
+    {
+      "id": "NFR-06",
+      "priority": "Must",
+      "name": "Persistence and audit",
+      "acceptance": "Successful writes are durable across an app restart. Review changes preserve raw outputs. A backup/restore rehearsal reconciles customer, interaction and review counts.",
+      "verification": "Restart and restore integration tests"
+    },
+    {
+      "id": "NFR-07",
+      "priority": "Must",
+      "name": "Input and output limits",
+      "acceptance": "API rejects interaction text above 2,000 words or 100 KB and imports above 100 records. Client rendering treats transcript/model output as text, not executable HTML.",
+      "verification": "Boundary and script-injection tests"
+    },
+    {
+      "id": "NFR-08",
+      "priority": "Must",
+      "name": "Review accountability",
+      "acceptance": "Only a human action sets approval. An algorithmic confidence value is not presented as a probability of correctness unless calibrated.",
+      "verification": "Review-state tests and UI inspection"
+    }
+  ]
+}

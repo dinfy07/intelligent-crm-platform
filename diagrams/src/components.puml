@@ -1,0 +1,25 @@
+@startuml
+skinparam backgroundColor white
+skinparam defaultFontName Arial
+skinparam shadowing false
+skinparam ArrowColor #43546B
+skinparam defaultFontSize 15
+skinparam componentStyle uml2
+title Draft component diagram — proposed architecture
+left to right direction
+component "Web UI\nVue 3 / TypeScript\nBeybit" as UI
+component "CRM API\nFastAPI / Python\nDanial\nAccess, import, jobs, reviews, export" as API
+database "PostgreSQL\nCustomers, turns, jobs, runs,\nreviews and audit" as DB
+component "Analysis worker\nPython / Akhmediyar\nLease jobs, method adapter,\noutput validation" as Worker
+artifact "Pinned local model\nor deterministic baseline" as Model
+cloud "Optional hosted model\nDisabled by default" as Hosted
+UI --> API : HTTP JSON / polling
+API --> DB : SQL transactions
+Worker --> DB : SQL leases and immutable runs
+Worker --> Model : local inference
+Worker ..> Hosted : optional permitted inference
+note bottom of Worker
+Validate schema and source references.
+Bound retries; retain source/config versions.
+end note
+@enduml

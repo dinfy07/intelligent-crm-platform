@@ -12,3 +12,4 @@ private-data/
 *.sqlite*
 *.log
 build/
+presentation/render/
