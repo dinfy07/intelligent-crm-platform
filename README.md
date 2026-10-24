@@ -35,6 +35,10 @@ python3 -m http.server 9137 --directory prototype
 
 Then open http://127.0.0.1:9137.
 
+Select an interaction and run analysis. Open a source reference to inspect the corresponding message, edit the summary, approve or reject it, and export the result as JSON. Search and the review filter select the visible customer interactions.
+
 ## Project tracking
 
 [YouTrack](https://crm-se2426.youtrack.cloud/projects/CRM/issues) · [Board](https://crm-se2426.youtrack.cloud/agiles/204-1/218-1)
+
+Changes are linked to YouTrack issues and submitted from task branches through pull requests. Another team member reviews each change before it is merged. Each student uses their own account and commits their own work.
