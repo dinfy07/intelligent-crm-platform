@@ -1,0 +1,51 @@
+{
+  "recorded_in_report_on": "2026-10-24",
+  "record_type": "Anonymous stakeholder feedback summaries",
+  "identification": "Participant codes and professional roles only; names and organisations omitted.",
+  "records": [
+    {
+      "id": "U01",
+      "role": "Director",
+      "feedback_date": null,
+      "channel": null,
+      "representation": "paraphrase",
+      "summary": "The director viewed CRM as an important tool for managing a business. In this respondent's view, a CRM platform with practical AI features could be particularly useful for small and medium-sized businesses seeking to organise work and operate more efficiently.",
+      "requirement_links": [
+        "FR-02",
+        "FR-03",
+        "FR-04",
+        "FR-11"
+      ]
+    },
+    {
+      "id": "U02",
+      "role": "Advisor to the Director",
+      "feedback_date": null,
+      "channel": null,
+      "representation": "paraphrase",
+      "summary": "The advisor expressed reservations about automating direct communication with customers. The respondent placed greater value on using AI to analyse correspondence and other business data, considering this a useful form of support for managers when assessing situations and deciding what to do next.",
+      "requirement_links": [
+        "FR-06",
+        "FR-07",
+        "FR-11"
+      ]
+    },
+    {
+      "id": "U03",
+      "role": "Sales Director",
+      "feedback_date": null,
+      "channel": null,
+      "representation": "paraphrase",
+      "summary": "The sales director identified gaps in how sales staff communicate with customers. Suggested applications included reviewing correspondence against sales scripts, identifying inappropriate wording or communication practices, and advising sales staff on the next step or a possible follow-up message.",
+      "requirement_links": [
+        "FR-06",
+        "FR-07"
+      ],
+      "extension_links": [
+        "EXT-01",
+        "EXT-02"
+      ]
+    }
+  ],
+  "evidence_scope": "Qualitative comments on the project concept; no timed task study or prototype usability session is recorded."
+}

@@ -1,0 +1,39 @@
+@startuml
+skinparam backgroundColor white
+skinparam defaultFontName Arial
+skinparam shadowing false
+skinparam ArrowColor #43546B
+skinparam defaultFontSize 15
+skinparam componentStyle uml2
+title Use case diagram — proposed MVP
+left to right direction
+actor Analyst
+actor Manager
+actor Administrator
+Manager --|> Analyst
+rectangle "Intelligent CRM Platform" {
+ usecase "Manage accessible\ncustomer records" as Customers
+ usecase "Capture text\ninteraction" as Capture
+ usecase "Request analysis" as Analyse
+ usecase "Validate input" as Validate
+ usecase "Review analysis" as Review
+ usecase "Inspect source turns" as Inspect
+ usecase "Edit reviewed summary" as Edit
+ usecase "Export accessible\nrecords" as Export
+ usecase "Manage users and roles" as Access
+}
+Analyst --> Customers
+Analyst --> Capture
+Analyst --> Analyse
+Analyst --> Review
+Analyst --> Export
+Administrator --> Access
+Capture ..> Validate : <<include>>
+Analyse ..> Validate : <<include>>
+Review ..> Inspect : <<include>>
+Edit ..> Review : <<extend>>\nbefore approval/rejection
+note bottom of Review
+Precondition: authenticated and authorised.
+Approval/rejection is a human action.
+end note
+@enduml
