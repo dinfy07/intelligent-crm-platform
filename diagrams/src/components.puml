@@ -5,19 +5,19 @@ skinparam shadowing false
 skinparam ArrowColor #43546B
 skinparam defaultFontSize 15
 skinparam componentStyle uml2
-title Draft component diagram — proposed architecture
-left to right direction
+title Intelligent CRM Platform\nProposed component architecture
+top to bottom direction
 component "Web UI\nVue 3 / TypeScript\nBeybit" as UI
-component "CRM API\nFastAPI / Python\nDanial\nAccess, import, jobs, reviews, export" as API
+component "CRM API\nFastAPI / Python\nDanial\nSession, role and ownership checks\nImport, jobs, reviews, export" as API
 database "PostgreSQL\nCustomers, turns, jobs, runs,\nreviews and audit" as DB
-component "Analysis worker\nPython / Akhmediyar\nLease jobs, method adapter,\noutput validation" as Worker
+component "Analysis worker\nPython / Akhmediyar\nLease committed jobs, method adapter,\noutput validation" as Worker
 artifact "Pinned local model\nor deterministic baseline" as Model
 cloud "Optional hosted model\nDisabled by default" as Hosted
-UI --> API : HTTP JSON / polling
-API --> DB : SQL transactions
-Worker --> DB : SQL leases and immutable runs
-Worker --> Model : local inference
-Worker ..> Hosted : optional permitted inference
+UI -down-> API : HTTP JSON\nSubmit job / poll job status
+API -down-> DB : Commit queued job\nbefore HTTP 202;\nread authorised status / result
+Worker -up-> DB : Lease committed jobs;\nstore state and immutable runs
+Worker -down-> Model : local inference
+Worker .down.> Hosted : optional permitted inference
 note bottom of Worker
 Validate schema and source references.
 Bound retries; retain source/config versions.
