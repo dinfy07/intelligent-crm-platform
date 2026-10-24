@@ -1,6 +1,10 @@
 # Intelligent CRM Platform
 
-Development of an Intelligent CRM Platform with Automated Customer Interaction Analysis.
+**English:** Development of an intelligent CRM platform for automated analysis of customer interactions
+
+**Қазақша:** Клиенттермен өзара әрекеттесуді автоматты түрде талдауға арналған интеллектуалды CRM-платформасын әзірлеу.
+
+**Русский:** Разработка интеллектуальной CRM-платформы с автоматизированным анализом взаимодействий с клиентами
 
 Customer-facing teams need to reconstruct customer context from scattered messages. This project is intended for sales and support staff and their managers. It combines customer records, interaction history and AI-assisted analysis of customer communication. Expected outputs include topic tags, summaries and source references, with user review before saving.
 
