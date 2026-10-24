@@ -20,6 +20,12 @@ The initial scope covers text interactions within one organisation. Voice proces
 
 Supervisor: Arailym Orazova. Software Engineering, SE-2426.
 
+## Contributions
+
+- Yeshimkul Beybit: browser prototype, project report and stakeholder feedback documents — [CRM-13](https://crm-se2426.youtrack.cloud/issue/CRM-13), [CRM-14](https://crm-se2426.youtrack.cloud/issue/CRM-14), [commit](https://github.com/dinfy07/intelligent-crm-platform/commit/22e2cebb31a834833fa5ad91a9bdffacfcfb9d9b), [PR 4](https://github.com/dinfy07/intelligent-crm-platform/pull/4).
+- Shaikenov Danial: component diagram clarifying API access, durable jobs and status polling, with matching report documents — [CRM-7](https://crm-se2426.youtrack.cloud/issue/CRM-7), [commit](https://github.com/dinfy07/intelligent-crm-platform/commit/2c7deeaba6391ee4bf2936362cdda91d843ede24), [PR 7](https://github.com/dinfy07/intelligent-crm-platform/pull/7).
+- Saken Akhmediyar: topic classification based on message text and rejection of blank speaker or message fields — [CRM-9](https://crm-se2426.youtrack.cloud/issue/CRM-9), [commit](https://github.com/dinfy07/intelligent-crm-platform/commit/eaa3af4c978c096b5c2661621d7b420d1e0c1026), [PR 5](https://github.com/dinfy07/intelligent-crm-platform/pull/5).
+
 ## Materials
 
 - [Report PDF](deliverables/Report.pdf)
