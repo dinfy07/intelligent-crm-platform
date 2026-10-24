@@ -1,4 +1,5 @@
 .DS_Store
+*:Zone.Identifier
 .env
 .env.*
 __pycache__/
