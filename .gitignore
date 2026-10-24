@@ -1,0 +1,11 @@
+.DS_Store
+.env
+.env.*
+__pycache__/
+*.py[cod]
+.venv/
+node_modules/
+private-data/
+*.sqlite*
+*.log
+build/
