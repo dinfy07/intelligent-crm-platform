@@ -18,8 +18,10 @@ Supervisor: Arailym Orazova. Software Engineering, SE-2426.
 
 ## Materials
 
-- [Report](deliverables/Report.docx)
-- [Anonymous stakeholder feedback](docs/evidence/stakeholder_feedback.json)
+- [Report PDF](deliverables/Report.pdf)
+- [Editable report](deliverables/Report.docx)
+- [Anonymous stakeholder feedback](deliverables/Stakeholder_Feedback.docx)
+- [YouTrack board and tasks PDF](deliverables/YouTrack.pdf)
 - [Diagram sources](diagrams/src)
 - [Diagrams](diagrams/exports)
 
