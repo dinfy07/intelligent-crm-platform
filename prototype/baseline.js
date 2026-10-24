@@ -12,11 +12,13 @@ function parseTurns(text){
  return text.trim().split(/\n+/).filter(x=>x.trim()).map((line,i)=>{
   const m=line.match(/^([^:]{1,40}):\s*(.+)$/);
   if(!m)throw new Error('Use one Speaker: message line for each turn.');
-  return {id:`turn-${i+1}`,sequence:i+1,speaker:m[1].trim(),text:m[2].trim()};
+  const speaker=m[1].trim(),message=m[2].trim();
+  if(!speaker||!message)throw new Error('Use one Speaker: message line for each turn.');
+  return {id:`turn-${i+1}`,sequence:i+1,speaker,text:message};
  });
 }
 async function analyse(text){
- const turns=parseTurns(text);const norm=text.toLowerCase();
+ const turns=parseTurns(text);const norm=turns.map(t=>t.text).join('\n').toLowerCase();
  const topics=Object.entries(rules).filter(([,words])=>words.some(w=>new RegExp(`\\b${w}\\b`,'i').test(norm))).map(([name])=>name);
  if(!topics.length)topics.push('Other');
  const scores=turns.map(t=>({t,score:Object.values(rules).flat().filter(w=>new RegExp(`\\b${w}\\b`,'i').test(t.text)).length*2+(/\b(will|send|agreed|by|please|need)\b/i.test(t.text)?1:0)}));
