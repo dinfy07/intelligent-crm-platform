@@ -1,6 +1,6 @@
 (function(root){
 'use strict';
-const VERSION='keyword-extractive-v1';
+const VERSION='keyword-extractive-v2';
 const rules={Billing:['invoice','refund','payment','charged','billing','price'],Onboarding:['onboarding','invite','invitation','setup','training'],Access:['login','password','access','authentication','permission','token'],Cancellation:['cancel','cancellation','unsubscribe','renewal']};
 function validate(text){
  if(typeof text!=='string'||!text.trim())throw new Error('Enter the interaction text.');
@@ -24,7 +24,7 @@ async function analyse(text){
  const scores=turns.map(t=>({t,score:Object.values(rules).flat().filter(w=>new RegExp(`\\b${w}\\b`,'i').test(t.text)).length*2+(/\b(will|send|agreed|by|please|need)\b/i.test(t.text)?1:0)}));
  const chosen=scores.sort((a,b)=>b.score-a.score||a.t.sequence-b.t.sequence).slice(0,3).sort((a,b)=>a.t.sequence-b.t.sequence);
  let remaining=120;const excerpts=[];
- for(const {t} of chosen){if(!remaining)break;const words=t.text.split(/\s+/);const kept=words.slice(0,remaining);remaining-=kept.length;excerpts.push({turnId:t.id,text:kept.join(' ')+(kept.length<words.length?' …':'')});}
+ for(const {t} of chosen){if(!remaining)break;const words=t.text.split(/\s+/);const kept=words.slice(0,remaining);remaining-=kept.length;excerpts.push({turnId:t.id,text:kept.join(' ')+(kept.length<words.length?'…':'')});}
  const digest=await root.crypto.subtle.digest('SHA-256',new TextEncoder().encode(text));
  const sourceHash=Array.from(new Uint8Array(digest)).map(x=>x.toString(16).padStart(2,'0')).join('');
  return {method:VERSION,modelRevision:'none',configVersion:'topics-2026-10-19',sourceHash,topics,summary:excerpts.map(x=>x.text).join(' '),sourceRefs:excerpts.map(x=>x.turnId),excerpts,createdAt:new Date().toISOString()};
